@@ -5,8 +5,8 @@
       "name": "Seki CLI",
       "website": "https://portal.cencox.xyz/",
       "short_description": {
-        "en": "seki steroids",
-        "es": "cliente seki"
+        "en": "without this, nothing matters",
+        "es": "Sin esto, nada importa"
       },
       "files": {
         "verification": "seki-cli/verification.js",
@@ -18,7 +18,7 @@
       "website": "https://ohmyz.sh/",
       "short_description": {
         "en": "best dev shell",
-        "es": "el mejor shell para devs"
+        "es": "La mejor shell para devs"
       },
       "files": {
         "verification": "zsh/verification.js",
@@ -29,8 +29,8 @@
       "name": "Node",
       "website": "https://nodejs.org/en/",
       "short_description": {
-        "en": "main language",
-        "es": "lenguaje principal"
+        "en": "The JS environment",
+        "es": "El entorno de ejecución"
       },
       "files": {
         "verification": "node/verification.js",
