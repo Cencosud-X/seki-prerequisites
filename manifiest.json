@@ -5,8 +5,8 @@
       "name": "Seki CLI",
       "website": "https://portal.cencox.xyz/",
       "short_description": {
-        "en": "without this, nothing matters",
-        "es": "Sin esto, nada importa"
+        "en": "The hearth of Seki",
+        "es": "El corazón de Seki"
       },
       "files": {
         "verification": "seki-cli/verification.js",
