@@ -1,0 +1,29 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/requisitesrc.schema.json",
+  "dependencies": [
+    {
+      "name": "Seki CLI",
+      "website": "https://portal.cencox.xyz/",
+      "files": {
+        "verification": "seki-cli/verification.js",
+        "installation": "seki-cli/installation.js"
+      }
+    },
+    {
+      "name": "Oh My Zsh!",
+      "website": "https://ohmyz.sh/",
+      "files": {
+        "verification": "zsh/verification.js",
+        "installation": "zsh/installation.js"
+      }
+    },
+    {
+      "name": "Node",
+      "website": "https://nodejs.org/en/",
+      "files": {
+        "verification": "node/verification.js",
+        "installation": "node/installation.js"
+      }
+    }
+  ]
+}
