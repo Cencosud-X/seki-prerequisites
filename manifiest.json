@@ -1,19 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/requisitesrc.schema.json",
-  "dependencies": [
-    {
-      "name": "Seki CLI",
-      "website": "https://portal.cencox.xyz/",
-      "short_description": {
-        "en": "The hearth of Seki",
-        "es": "El corazón de Seki"
-      },
-      "files": {
-        "verification": "seki-cli/verification.js",
-        "installation": "seki-cli/installation.js"
-      }
-    },
-    {
+  "dependencies": [{
       "name": "Oh My Zsh!",
       "website": "https://ohmyz.sh/",
       "short_description": {
