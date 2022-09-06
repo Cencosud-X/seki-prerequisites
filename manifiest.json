@@ -2,20 +2,6 @@
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/requisitesrc.schema.json",
   "dependencies": [
     {
-      "name": "Docker Compose",
-      "website": "http://docker.org",
-      "short_description": {
-        "en": "all is composes",
-        "es": "la ballenita"
-      },
-      "files": {
-        "verification": "check_if_is_installed.sh",
-        "installation": "install_compose.js",
-        "after": "cleaning_process.sh",
-        "rollback": "panic_rollback.sh"
-      }
-    },
-    {
       "name": "Oh My Zsh!",
       "website": "https://ohmyz.sh/",
       "short_description": {
