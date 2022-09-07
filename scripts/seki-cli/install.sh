@@ -66,7 +66,7 @@ mainCheck() {
 
 
         sekiURL=$releases_api_url/$v/$name.zip
-        echo "Downloading from: $sekiURL ..."
+        echo "> Downloading $sekiURL"
         curl -LO $sekiURL
         sudo chmod 755 $name.zip
         unzip $name.zip -d $name
@@ -91,4 +91,5 @@ if [ -x "$(command -v seki)" ]; then
 else
     echo "Download failed 😔"
     echo "Please try again."
+    exit 1;
 fi
