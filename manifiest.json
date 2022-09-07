@@ -9,8 +9,8 @@
         "es": "La mejor shell para devs"
       },
       "files": {
-        "verification": "scripts/zsh/verification.js",
-        "installation": "scripts/zsh/installation.js"
+        "verification": "scripts/zsh/verification.sh",
+        "installation": "scripts/zsh/installation.sh"
       }
     },
     {
@@ -21,8 +21,8 @@
         "es": "El entorno de ejecución"
       },
       "files": {
-        "verification": "scripts/node/verification.js",
-        "installation": "scripts/node/installation.js"
+        "verification": "scripts/node/verification.sh",
+        "installation": "scripts/node/installation.sh"
       }
     }
   ]

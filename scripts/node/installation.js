@@ -1,3 +1,7 @@
 module.exports = (runner) => {
-  runner.exec('echo $PATH');
+  return new Promise((resolve)=>{
+    const paths = await runner.execSync('echo $PATH');
+    console.log(paths);
+    resolve(true);
+  })
 }
