@@ -66,6 +66,7 @@ mainCheck() {
 
 
         sekiURL=$releases_api_url/$v/$name.zip
+        echo 'Downloading from: $sekiURL ...'
         curl -LO $sekiURL
         sudo chmod 755 $name.zip
         unzip $name.zip -d $name
