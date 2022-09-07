@@ -35,10 +35,11 @@ mainCheck() {
         curl -LO $sekiURL;
         sudo chmod 755 $name.zip;
         unzip -o $name.zip -d $name;
+
         rm $name.zip;
 
         # move to home path
-        sudo mv $name/seki $sekiPath;
+        sudo cp $name/seki $sekiPath/seki;
         rm -rf $name;
 
     elif [ "$UNAME" == "Linux" ]; then
@@ -70,8 +71,9 @@ mainCheck() {
 rmOldFiles
 mainCheck
 
-if [ -x "$(command -v seki)" ]; then
-    echo "\r\n> 🙏 Thanks for installing Seki CLI! If this is your first time using the CLI, be sure to run `seki --help` first."
+res=$($sekiPath/seki --version)
+if [[ $res ]]; then
+    echo "\r\n> 🙏 Thanks for installing Seki CLI! If this is your first time using the CLI, be sure to run `$sekiPath/seki --help` first."
 else
     echo "Download failed 😔"
     echo "Please try again."
