@@ -39,8 +39,10 @@ mainCheck() {
         rm $name.zip;
 
         echo "DEBUG - START"
-        ls -lrt $name
-        sudo cp $name/seki ~/seki
+        FILE=$name/seki
+        if test -f "$FILE"; then
+            echo "$FILE exists."
+        fi
         echo "DEBUG - END"
 
         # move to home path
