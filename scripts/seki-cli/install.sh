@@ -34,12 +34,14 @@ mainCheck() {
         echo "> Downloading $sekiURL \r\n";
         curl -LO $sekiURL;
         sudo chmod 755 $name.zip;
-        echo "$name-$sekiPath"
-        ls -ltr
         unzip -o $name.zip -d $name;
-        ls -ltr
+
         rm $name.zip;
-        ls -ltr
+
+        echo "DEBUG - START"
+        ls -lrt $name
+        echo "DEBUG - END"
+
         # move to home path
         sudo cp $name/seki $sekiPath/seki;
         rm -rf $name;
