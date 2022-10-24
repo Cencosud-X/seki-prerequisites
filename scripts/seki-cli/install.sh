@@ -38,10 +38,15 @@ mainCheck() {
 
         rm $name.zip;
 
-        # move to home path
-        mkdir -p $sekiPath;
+        # create install path if not exist
+        if [ ! -d "$sekiPath" ]; then
+            echo "$sekiPath not found, creating instead";
+            sudo mkdir -p -m 775 $sekiPath
+        fi
+
+        # move to install path
         sudo cp $name/seki $sekiPath/seki;
-        # rm -rf $name;
+        rm -rf $name;
 
     elif [ "$UNAME" == "Linux" ]; then
         name="seki_linux_${v}";
