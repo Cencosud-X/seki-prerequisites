@@ -48,7 +48,7 @@ mainCheck() {
 
         # move to home path
         sudo cp $name/seki $sekiPath/seki;
-        rm -rf $name;
+        # rm -rf $name;
 
     elif [ "$UNAME" == "Linux" ]; then
         name="seki_linux_${v}";
