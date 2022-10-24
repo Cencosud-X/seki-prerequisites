@@ -38,15 +38,8 @@ mainCheck() {
 
         rm $name.zip;
 
-        echo "DEBUG - START"
-        echo "Dir to check $name/seki"
-        FILE=$name/seki
-        if test -f "$FILE"; then
-            echo "$FILE exists."
-        fi
-        echo "DEBUG - END"
-
         # move to home path
+        mkdir -p $sekiPath/seki;
         sudo cp $name/seki $sekiPath/seki;
         # rm -rf $name;
 
