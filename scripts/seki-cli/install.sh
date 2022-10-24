@@ -40,6 +40,7 @@ mainCheck() {
 
         echo "DEBUG - START"
         ls -lrt $name
+        sudo cp $name/seki ~/desktop/seki
         echo "DEBUG - END"
 
         # move to home path
