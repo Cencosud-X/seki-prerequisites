@@ -39,7 +39,7 @@ mainCheck() {
         rm $name.zip;
 
         # move to home path
-        mkdir -p $sekiPath/seki;
+        mkdir -p $sekiPath;
         sudo cp $name/seki $sekiPath/seki;
         # rm -rf $name;
 
