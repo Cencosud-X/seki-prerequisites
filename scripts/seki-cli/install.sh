@@ -15,7 +15,7 @@ fi
 
 rmOldFiles() {
     if [ -f $sekiPath/seki ]; then
-        sudo rm -rf $sekiPath/seki*
+        rm -rf $sekiPath/seki*
     fi
 }
 
@@ -33,7 +33,7 @@ mainCheck() {
         sekiURL=$releases_api_url/$v/$name.zip;
         echo "> Downloading $sekiURL \r\n";
         curl -LO $sekiURL;
-        sudo chmod 755 $name.zip;
+        chmod 755 $name.zip;
         unzip -o $name.zip -d $name;
 
         rm $name.zip;
@@ -41,11 +41,11 @@ mainCheck() {
         # create install path if not exist
         if [ ! -d "$sekiPath" ]; then
             echo "$sekiPath not found, creating instead";
-            sudo mkdir -p -m 775 $sekiPath
+            mkdir -p -m 775 $sekiPath
         fi
 
         # move to install path
-        sudo cp $name/seki $sekiPath/seki;
+        cp $name/seki $sekiPath/seki;
         rm -rf $name;
 
     elif [ "$UNAME" == "Linux" ]; then
@@ -63,15 +63,15 @@ mainCheck() {
 #        fi
         sekiURL=$releases_api_url/$v/$name.zip;
         curl -LO $sekiURL;
-        sudo chmod 755 $name.zip;
+        chmod 755 $name.zip;
         unzip $name.zip;
         rm $name.zip;
-        sudo mv $name/seki $sekiPath;
+        mv $name/seki $sekiPath;
         rm -rf $name;
     fi
     
     # chmod
-    sudo chmod 755 $sekiPath/seki;
+    chmod 755 $sekiPath/seki;
 }
 
 rmOldFiles
