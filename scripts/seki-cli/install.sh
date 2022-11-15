@@ -64,7 +64,7 @@ mainCheck() {
         sekiURL=$releases_api_url/$v/$name.zip;
         curl -LO $sekiURL;
         chmod 755 $name.zip;
-        unzip $name.zip;
+        unzip $name.zip -d $name;
         rm $name.zip;
         mv $name/seki $sekiPath;
         rm -rf $name;
