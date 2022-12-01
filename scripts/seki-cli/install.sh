@@ -1,16 +1,23 @@
 #!/bin/bash
 
 installPath=$1      # INSTALL PATH ARG
-sekiPath=""         # SEKI INSTALLATION PATH
+version=$2           # VERSION TO INSTALL
 UNAME=$(uname)      # OS NAME
 ARCH=$(uname -m)    # ARCH OS IDENTIFIER
-v=$(curl --silent "https://api.github.com/repos/Cencosud-X/seki-schemas/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 releases_api_url=https://github.com/Cencosud-X/seki-schemas/releases/download
+sekiPath=""         # SEKI INSTALLATION PATH
+v=""         # SEKI VERSION
 
 if [ "$installPath" != "" ]; then
     sekiPath=$installPath
 else
     sekiPath=/usr/local/bin
+fi
+
+if [ "$version" != "" ]; then
+    v=$version
+else
+    v=$(curl --silent "https://api.github.com/repos/Cencosud-X/seki-schemas/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 fi
 
 rmOldFiles() {
